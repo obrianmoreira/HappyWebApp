@@ -1,0 +1,23 @@
+@import "./abstracts/variables";
+
+@import "./node_modules/bootstrap/scss/functions";
+@import "./node_modules/bootstrap/scss/variables";
+@import "./node_modules/bootstrap/scss/mixins";
+
+
+@import "./abstracts/map-amends";
+
+@import "./node_modules/bootstrap/scss/bootstrap";
+
+:root{
+    @each $spacer, $value in $spacers {
+        --theme-spacer-#{$spacer}: #{$value};
+    }
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+
+:root{
+    --bs-body-font-family: 'Josefin Sans', sans-serif;
+}
