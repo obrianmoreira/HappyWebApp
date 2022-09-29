@@ -2,7 +2,7 @@ const express = require('express');
 const app = new express();
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-const url = 
+const myURL = new URL('http://happyapi-cleaning.vercel.app');
 
 
 app.use(bodyParser.urlencoded({extended: true}));
