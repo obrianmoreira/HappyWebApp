@@ -1,6 +1,5 @@
 const express = require('express');
 const app = new express();
-const PORT = process.env.PORT || 3000
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 
@@ -23,7 +22,7 @@ const Lead = mongoose.model('Lead', leadSchema);
     //res.render(__dirname + "/views/pages/index.ejs",{});
 //})
 
-app.listen(PORT, function(){
+app.listen(3000, function(){
     console.log("Foi")
 })
 
