@@ -2,6 +2,7 @@ const express = require('express');
 const app = new express();
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
+const url = 
 
 
 app.use(bodyParser.urlencoded({extended: true}));
@@ -31,7 +32,7 @@ app.post("/leads", (req, res) =>{
         phone: req.body.phone
     })
     newLead.save();
-    res.redirect("http://localhost:1234");
+    res.redirect("happyapp-cleaning.vercel.app");
 })
 
 app.listen(3000, function(){
