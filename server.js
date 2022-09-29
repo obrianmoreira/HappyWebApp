@@ -32,7 +32,7 @@ app.post("/leads", (req, res) =>{
         phone: req.body.phone
     })
     newLead.save();
-    res.redirect("happyapp-cleaning.vercel.app");
+    res.redirect("http://happyapp-cleaning.vercel.app");
 })
 
 app.listen(3000, function(){
