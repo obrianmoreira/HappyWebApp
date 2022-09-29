@@ -34,5 +34,5 @@ app.post('/leads', (req, res) =>{
         phone: req.body.phone
     })
     newLead.save();
-    res.redirect('http://localhost:53001/');
+    res.redirect('http://localhost:1234');
 })

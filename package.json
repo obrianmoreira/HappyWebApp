@@ -2,12 +2,18 @@
   "name": "happylandpage",
   "version": "1.0.0",
   "description": "",
-  "source": "./src/index.html",
-  "sourcetwo": "server.js",
+  "targets":{
+    "frontend": {
+      "source": "./src/index.html"
+    },
+    "backend": {
+      "source": "/server.js"
+    }
+  },
   "scripts": {
     "dev": "parcel",
     "build": "parcel build --public-url ./",
-    "start": "nodemon serve.js"
+    "start": "nodemon server.js"
   },
   "keywords": [],
   "author": "",
