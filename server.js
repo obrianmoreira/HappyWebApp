@@ -2,7 +2,6 @@ const express = require('express');
 const app = new express();
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-const myURL = new URL('http://happyapi-cleaning.vercel.app');
 
 
 app.use(bodyParser.urlencoded({extended: true}));
@@ -33,8 +32,4 @@ app.post("/leads", (req, res) =>{
     })
     newLead.save();
     res.redirect("http://happyapp-cleaning.vercel.app");
-})
-
-app.listen(3000, function(){
-    console.log("Foi")
 })
