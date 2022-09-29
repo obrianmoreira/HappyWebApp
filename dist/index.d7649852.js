@@ -2930,8 +2930,8 @@ Stream.prototype.pipe = function(dest, options) {
 // OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
 // USE OR OTHER DEALINGS IN THE SOFTWARE.
 "use strict";
-var process = require("process");
 var global = arguments[3];
+var process = require("process");
 module.exports = Readable;
 /*<replacement>*/ var Duplex;
 /*</replacement>*/ Readable.ReadableState = ReadableState;
@@ -5727,8 +5727,8 @@ Object.defineProperty(Duplex.prototype, "destroyed", {
 // Implement an async ._write(chunk, encoding, cb), and it'll handle all
 // the drain event emission and buffering.
 "use strict";
-var process = require("process");
 var global = arguments[3];
+var process = require("process");
 module.exports = Writable;
 /* <replacement> */ function WriteReq(chunk, encoding, cb) {
     this.chunk = chunk;
@@ -7602,8 +7602,8 @@ util.inherits(Unzip, Zlib);
 
 },{"process":"d5jf4","buffer":"fCgem","stream":"j77ns","./binding":"6q1Nd","util":"cxohQ","assert":"f3tT4"}],"6q1Nd":[function(require,module,exports) {
 "use strict";
-var Buffer = require("buffer").Buffer;
 var process = require("process");
+var Buffer = require("buffer").Buffer;
 /* eslint camelcase: "off" */ var assert = require("assert");
 var Zstream = require("pako/lib/zlib/zstream");
 var zlib_deflate = require("pako/lib/zlib/deflate.js");
@@ -7885,7 +7885,7 @@ Zlib.prototype._reset = function() {
 };
 exports.Zlib = Zlib;
 
-},{"buffer":"fCgem","process":"d5jf4","assert":"f3tT4","pako/lib/zlib/zstream":"5ZapS","pako/lib/zlib/deflate.js":"elVQe","pako/lib/zlib/inflate.js":"g5zaP","pako/lib/zlib/constants":"hBkF3"}],"f3tT4":[function(require,module,exports) {
+},{"process":"d5jf4","buffer":"fCgem","assert":"f3tT4","pako/lib/zlib/zstream":"5ZapS","pako/lib/zlib/deflate.js":"elVQe","pako/lib/zlib/inflate.js":"g5zaP","pako/lib/zlib/constants":"hBkF3"}],"f3tT4":[function(require,module,exports) {
 // Currently in sync with Node.js lib/assert.js
 // https://github.com/nodejs/node/commit/2a51ae424a513ec9a6aa3466baa0cc1d55dd4f3b
 // Originally from narwhal.js (http://narwhaljs.org)
@@ -15830,8 +15830,8 @@ module.exports = {
  * Copyright(c) 2014-2022 Douglas Christopher Wilson
  * MIT Licensed
  */ "use strict";
-var global = arguments[3];
 var process = require("process");
+var global = arguments[3];
 var Buffer = require("buffer").Buffer;
 /**
  * Module dependencies.
@@ -21276,8 +21276,8 @@ app.del = deprecate.function(app.delete, "app.del: Use app.delete instead");
  * Copyright(c) 2014-2022 Douglas Christopher Wilson
  * MIT Licensed
  */ "use strict";
-var process = require("process");
 var Buffer = require("buffer").Buffer;
+var process = require("process");
 /**
  * Module dependencies.
  * @private
@@ -21504,7 +21504,7 @@ var isFinished = onFinished.isFinished;
     }
 }
 
-},{"process":"d5jf4","buffer":"fCgem","debug":"l0oUb","encodeurl":"ltQVl","escape-html":"dq9In","on-finished":"jSXz6","parseurl":"e7zvo","statuses":"l1u37","unpipe":"90C9o"}],"ltQVl":[function(require,module,exports) {
+},{"buffer":"fCgem","process":"d5jf4","debug":"l0oUb","encodeurl":"ltQVl","escape-html":"dq9In","on-finished":"jSXz6","parseurl":"e7zvo","statuses":"l1u37","unpipe":"90C9o"}],"ltQVl":[function(require,module,exports) {
 /*!
  * encodeurl
  * Copyright(c) 2016 Douglas Christopher Wilson
@@ -23827,9 +23827,9 @@ http.METHODS = [
 ];
 
 },{"./lib/request":"csW06","./lib/response":"47huq","xtend":"93zjj","builtin-status-codes":"iqSVp","url":"7qjc7"}],"csW06":[function(require,module,exports) {
-var global = arguments[3];
-var Buffer = require("buffer").Buffer;
 var process = require("process");
+var Buffer = require("buffer").Buffer;
+var global = arguments[3];
 var capability = require("./capability");
 var inherits = require("inherits");
 var response = require("./response");
@@ -24095,7 +24095,7 @@ var unsafeHeaders = [
     "via"
 ];
 
-},{"buffer":"fCgem","process":"d5jf4","./capability":"jih7t","inherits":"bRL3M","./response":"47huq","readable-stream":"jXNWE"}],"jih7t":[function(require,module,exports) {
+},{"process":"d5jf4","buffer":"fCgem","./capability":"jih7t","inherits":"bRL3M","./response":"47huq","readable-stream":"jXNWE"}],"jih7t":[function(require,module,exports) {
 var global = arguments[3];
 exports.fetch = isFunction(global.fetch) && isFunction(global.ReadableStream);
 exports.writableStream = isFunction(global.WritableStream);
@@ -24147,9 +24147,9 @@ xhr = null // Help gc
 ;
 
 },{}],"47huq":[function(require,module,exports) {
-var process = require("process");
-var Buffer = require("buffer").Buffer;
 var global = arguments[3];
+var Buffer = require("buffer").Buffer;
+var process = require("process");
 var capability = require("./capability");
 var inherits = require("inherits");
 var stream = require("readable-stream");
@@ -24321,7 +24321,7 @@ IncomingMessage.prototype._onXHRProgress = function(resetTimers) {
     }
 };
 
-},{"process":"d5jf4","buffer":"fCgem","./capability":"jih7t","inherits":"bRL3M","readable-stream":"jXNWE"}],"jXNWE":[function(require,module,exports) {
+},{"buffer":"fCgem","process":"d5jf4","./capability":"jih7t","inherits":"bRL3M","readable-stream":"jXNWE"}],"jXNWE":[function(require,module,exports) {
 exports = module.exports = require("./lib/_stream_readable.js");
 exports.Stream = exports;
 exports.Readable = exports;
@@ -25925,8 +25925,8 @@ exports.constants = {
 
 },{"randombytes":"8hjhE","create-hash":"2WyL8","create-hmac":"k1utz","browserify-sign/algos":"busIB","pbkdf2":"g38Hg","browserify-cipher":"d4idn","diffie-hellman":"hwD3y","browserify-sign":"jbRNy","create-ecdh":"9Rcg1","public-encrypt":"h9Rdh","randomfill":"k3tsT"}],"8hjhE":[function(require,module,exports) {
 "use strict";
-var global = arguments[3];
 var process = require("process");
+var global = arguments[3];
 // limit of Crypto.getRandomValues()
 // https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues
 var MAX_BYTES = 65536;
