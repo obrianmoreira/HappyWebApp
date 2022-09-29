@@ -24,14 +24,12 @@ const Lead = mongoose.model('Lead', leadSchema);
     //res.render(__dirname + "/views/pages/index.ejs",{});
 //})
 
-app.listen(myURL, function(){
-    app.post(myURL, (req, res) =>{
-        let newLead = new Lead({
-            name: req.body.name,
-            email: req.body.email,
-            phone: req.body.phone
-        })
-        newLead.save();
-        res.redirect("http://happyapp-cleaning.vercel.app");
+app.post(myURL, (req, res) =>{
+    let newLead = new Lead({
+        name: req.body.name,
+        email: req.body.email,
+        phone: req.body.phone
     })
+    newLead.save();
+    res.redirect("http://happyapp-cleaning.vercel.app");
 })
