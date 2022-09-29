@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "source": "./src/index.html",
+  "sourcetwo": "server.js",
   "scripts": {
     "dev": "parcel",
     "build": "parcel build --public-url ./",

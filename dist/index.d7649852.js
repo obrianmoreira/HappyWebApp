@@ -534,7 +534,6 @@ function hmrAcceptRun(bundle, id) {
 },{}],"6lo7H":[function(require,module,exports) {
 const express = require("express");
 const app = new express();
-const PORT = 3000;
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({
@@ -553,11 +552,11 @@ const leadSchema = {
     phone: String
 };
 const Lead = mongoose.model("Lead", leadSchema);
-//app.get("/", (req, res)=>{
+//app.get("https://happy-lead-app.vercel.app", (req, res)=>{
 //res.sendFile(__dirname + "/src/index.html");
 //res.render(__dirname + "/views/pages/index.ejs",{});
 //})
-app.listen(PORT, function() {
+app.listen("3000", function() {
     console.log("Foi");
 });
 app.post("/leads", (req, res)=>{
@@ -568,7 +567,7 @@ app.post("/leads", (req, res)=>{
         phone: req.body.phone
     });
     newLead.save();
-    res.redirect("https://happyapp-cleaning.vercel.app");
+    res.redirect("http://localhost:53001/");
 });
 
 },{"express":"nvDge","mongoose":"eslQT","body-parser":"dTImT"}],"nvDge":[function(require,module,exports) {
@@ -2930,8 +2929,8 @@ Stream.prototype.pipe = function(dest, options) {
 // OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
 // USE OR OTHER DEALINGS IN THE SOFTWARE.
 "use strict";
-var process = require("process");
 var global = arguments[3];
+var process = require("process");
 module.exports = Readable;
 /*<replacement>*/ var Duplex;
 /*</replacement>*/ Readable.ReadableState = ReadableState;
@@ -7602,8 +7601,8 @@ util.inherits(Unzip, Zlib);
 
 },{"process":"d5jf4","buffer":"fCgem","stream":"j77ns","./binding":"6q1Nd","util":"cxohQ","assert":"f3tT4"}],"6q1Nd":[function(require,module,exports) {
 "use strict";
-var process = require("process");
 var Buffer = require("buffer").Buffer;
+var process = require("process");
 /* eslint camelcase: "off" */ var assert = require("assert");
 var Zstream = require("pako/lib/zlib/zstream");
 var zlib_deflate = require("pako/lib/zlib/deflate.js");
@@ -7885,7 +7884,7 @@ Zlib.prototype._reset = function() {
 };
 exports.Zlib = Zlib;
 
-},{"process":"d5jf4","buffer":"fCgem","assert":"f3tT4","pako/lib/zlib/zstream":"5ZapS","pako/lib/zlib/deflate.js":"elVQe","pako/lib/zlib/inflate.js":"g5zaP","pako/lib/zlib/constants":"hBkF3"}],"f3tT4":[function(require,module,exports) {
+},{"buffer":"fCgem","process":"d5jf4","assert":"f3tT4","pako/lib/zlib/zstream":"5ZapS","pako/lib/zlib/deflate.js":"elVQe","pako/lib/zlib/inflate.js":"g5zaP","pako/lib/zlib/constants":"hBkF3"}],"f3tT4":[function(require,module,exports) {
 // Currently in sync with Node.js lib/assert.js
 // https://github.com/nodejs/node/commit/2a51ae424a513ec9a6aa3466baa0cc1d55dd4f3b
 // Originally from narwhal.js (http://narwhaljs.org)
@@ -15830,8 +15829,8 @@ module.exports = {
  * Copyright(c) 2014-2022 Douglas Christopher Wilson
  * MIT Licensed
  */ "use strict";
-var process = require("process");
 var global = arguments[3];
+var process = require("process");
 var Buffer = require("buffer").Buffer;
 /**
  * Module dependencies.
@@ -23827,9 +23826,9 @@ http.METHODS = [
 ];
 
 },{"./lib/request":"csW06","./lib/response":"47huq","xtend":"93zjj","builtin-status-codes":"iqSVp","url":"7qjc7"}],"csW06":[function(require,module,exports) {
-var global = arguments[3];
 var process = require("process");
 var Buffer = require("buffer").Buffer;
+var global = arguments[3];
 var capability = require("./capability");
 var inherits = require("inherits");
 var response = require("./response");
@@ -24148,8 +24147,8 @@ xhr = null // Help gc
 
 },{}],"47huq":[function(require,module,exports) {
 var Buffer = require("buffer").Buffer;
-var global = arguments[3];
 var process = require("process");
+var global = arguments[3];
 var capability = require("./capability");
 var inherits = require("inherits");
 var stream = require("readable-stream");
@@ -24321,7 +24320,7 @@ IncomingMessage.prototype._onXHRProgress = function(resetTimers) {
     }
 };
 
-},{"buffer":"fCgem","process":"d5jf4","./capability":"jih7t","inherits":"bRL3M","readable-stream":"jXNWE"}],"jXNWE":[function(require,module,exports) {
+},{"process":"d5jf4","buffer":"fCgem","./capability":"jih7t","inherits":"bRL3M","readable-stream":"jXNWE"}],"jXNWE":[function(require,module,exports) {
 exports = module.exports = require("./lib/_stream_readable.js");
 exports.Stream = exports;
 exports.Readable = exports;

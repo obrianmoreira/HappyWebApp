@@ -34,5 +34,5 @@ app.post('/leads', (req, res) =>{
         phone: req.body.phone
     })
     newLead.save();
-    res.redirect('happy-lead-app.vercel.app');
+    res.redirect('http://localhost:53001/');
 })
