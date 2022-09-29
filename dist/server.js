@@ -567,7 +567,7 @@ app.post("/leads", (req, res)=>{
         phone: req.body.phone
     });
     newLead.save();
-    res.redirect("happy-lead-app.vercel.app");
+    res.redirect("http://localhost:1234");
 });
 
 },{"express":"nvDge","mongoose":"eslQT","body-parser":"dTImT"}],"nvDge":[function(require,module,exports) {
@@ -7601,8 +7601,8 @@ util.inherits(Unzip, Zlib);
 
 },{"process":"d5jf4","buffer":"fCgem","stream":"j77ns","./binding":"6q1Nd","util":"cxohQ","assert":"f3tT4"}],"6q1Nd":[function(require,module,exports) {
 "use strict";
-var process = require("process");
 var Buffer = require("buffer").Buffer;
+var process = require("process");
 /* eslint camelcase: "off" */ var assert = require("assert");
 var Zstream = require("pako/lib/zlib/zstream");
 var zlib_deflate = require("pako/lib/zlib/deflate.js");
@@ -15829,9 +15829,9 @@ module.exports = {
  * Copyright(c) 2014-2022 Douglas Christopher Wilson
  * MIT Licensed
  */ "use strict";
+var Buffer = require("buffer").Buffer;
 var process = require("process");
 var global = arguments[3];
-var Buffer = require("buffer").Buffer;
 /**
  * Module dependencies.
  * @private
@@ -16048,7 +16048,7 @@ var unpipe = require("unpipe");
     return res.runInAsyncScope.bind(res, fn, null);
 }
 
-},{"process":"d5jf4","buffer":"fCgem","bytes":"l03qK","http-errors":"a3NQ3","iconv-lite":"iC7RY","unpipe":"90C9o","async_hooks":"jhUEF"}],"iC7RY":[function(require,module,exports) {
+},{"buffer":"fCgem","process":"d5jf4","bytes":"l03qK","http-errors":"a3NQ3","iconv-lite":"iC7RY","unpipe":"90C9o","async_hooks":"jhUEF"}],"iC7RY":[function(require,module,exports) {
 "use strict";
 var process = require("process");
 // Some environments don't have global Buffer (e.g. React Native).
@@ -20324,8 +20324,8 @@ var encode = function encode(str, defaultEncoder, charset, kind, format) {
          || c >= 0x30 && c <= 0x39 // 0-9
          || c >= 0x41 && c <= 0x5A // a-z
          || c >= 0x61 && c <= 0x7A // A-Z
-         || format === formats.RFC1738 && (c === 0x28 || c === 0x29) // ( )
-        ) {
+         || format === formats.RFC1738 && (c === 0x28 || c === 0x29 // ( )
+        )) {
             out += string.charAt(i);
             continue;
         }
@@ -21275,8 +21275,8 @@ app.del = deprecate.function(app.delete, "app.del: Use app.delete instead");
  * Copyright(c) 2014-2022 Douglas Christopher Wilson
  * MIT Licensed
  */ "use strict";
-var process = require("process");
 var Buffer = require("buffer").Buffer;
+var process = require("process");
 /**
  * Module dependencies.
  * @private
@@ -21503,7 +21503,7 @@ var isFinished = onFinished.isFinished;
     }
 }
 
-},{"process":"d5jf4","buffer":"fCgem","debug":"l0oUb","encodeurl":"ltQVl","escape-html":"dq9In","on-finished":"jSXz6","parseurl":"e7zvo","statuses":"l1u37","unpipe":"90C9o"}],"ltQVl":[function(require,module,exports) {
+},{"buffer":"fCgem","process":"d5jf4","debug":"l0oUb","encodeurl":"ltQVl","escape-html":"dq9In","on-finished":"jSXz6","parseurl":"e7zvo","statuses":"l1u37","unpipe":"90C9o"}],"ltQVl":[function(require,module,exports) {
 /*!
  * encodeurl
  * Copyright(c) 2016 Douglas Christopher Wilson
@@ -23826,9 +23826,9 @@ http.METHODS = [
 ];
 
 },{"./lib/request":"csW06","./lib/response":"47huq","xtend":"93zjj","builtin-status-codes":"iqSVp","url":"7qjc7"}],"csW06":[function(require,module,exports) {
+var process = require("process");
 var global = arguments[3];
 var Buffer = require("buffer").Buffer;
-var process = require("process");
 var capability = require("./capability");
 var inherits = require("inherits");
 var response = require("./response");
@@ -24146,9 +24146,9 @@ xhr = null // Help gc
 ;
 
 },{}],"47huq":[function(require,module,exports) {
-var process = require("process");
 var Buffer = require("buffer").Buffer;
 var global = arguments[3];
+var process = require("process");
 var capability = require("./capability");
 var inherits = require("inherits");
 var stream = require("readable-stream");
@@ -25924,8 +25924,8 @@ exports.constants = {
 
 },{"randombytes":"8hjhE","create-hash":"2WyL8","create-hmac":"k1utz","browserify-sign/algos":"busIB","pbkdf2":"g38Hg","browserify-cipher":"d4idn","diffie-hellman":"hwD3y","browserify-sign":"jbRNy","create-ecdh":"9Rcg1","public-encrypt":"h9Rdh","randomfill":"k3tsT"}],"8hjhE":[function(require,module,exports) {
 "use strict";
-var global = arguments[3];
 var process = require("process");
+var global = arguments[3];
 // limit of Crypto.getRandomValues()
 // https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues
 var MAX_BYTES = 65536;
@@ -27748,8 +27748,8 @@ module.exports = function(iterations, keylen) {
 };
 
 },{}],"T9r9Q":[function(require,module,exports) {
-var global = arguments[3];
 var process = require("process");
+var global = arguments[3];
 var defaultEncoding;
 /* istanbul ignore next */ if (global.process && global.process.browser) defaultEncoding = "utf-8";
 else if (global.process && global.process.version) {
@@ -79033,4 +79033,4 @@ object-assign
 
 },{}]},["9yEOA","6lo7H"], "6lo7H", "parcelRequireeff5")
 
-//# sourceMappingURL=server.js.map
+//# sourceMappingURL=index.d7649852.js.map
