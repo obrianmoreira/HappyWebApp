@@ -17,7 +17,7 @@ const leadSchema = {
 
 const Lead = mongoose.model('Lead', leadSchema);
 
-app.get("happy-lead-app.vercel.app", (req, res)=>{
+app.get("https://happy-lead-app.vercel.app", (req, res)=>{
     //res.sendFile(__dirname + "/src/index.html");
     res.render(__dirname + "/views/pages/index.ejs",{});
 })
