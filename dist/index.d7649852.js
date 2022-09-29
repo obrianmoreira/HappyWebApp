@@ -15830,9 +15830,9 @@ module.exports = {
  * Copyright(c) 2014-2022 Douglas Christopher Wilson
  * MIT Licensed
  */ "use strict";
+var global = arguments[3];
 var process = require("process");
 var Buffer = require("buffer").Buffer;
-var global = arguments[3];
 /**
  * Module dependencies.
  * @private
@@ -16049,7 +16049,7 @@ var unpipe = require("unpipe");
     return res.runInAsyncScope.bind(res, fn, null);
 }
 
-},{"buffer":"fCgem","process":"d5jf4","bytes":"l03qK","http-errors":"a3NQ3","iconv-lite":"iC7RY","unpipe":"90C9o","async_hooks":"jhUEF"}],"iC7RY":[function(require,module,exports) {
+},{"process":"d5jf4","buffer":"fCgem","bytes":"l03qK","http-errors":"a3NQ3","iconv-lite":"iC7RY","unpipe":"90C9o","async_hooks":"jhUEF"}],"iC7RY":[function(require,module,exports) {
 "use strict";
 var process = require("process");
 // Some environments don't have global Buffer (e.g. React Native).
@@ -21276,8 +21276,8 @@ app.del = deprecate.function(app.delete, "app.del: Use app.delete instead");
  * Copyright(c) 2014-2022 Douglas Christopher Wilson
  * MIT Licensed
  */ "use strict";
-var Buffer = require("buffer").Buffer;
 var process = require("process");
+var Buffer = require("buffer").Buffer;
 /**
  * Module dependencies.
  * @private
@@ -23827,8 +23827,8 @@ http.METHODS = [
 ];
 
 },{"./lib/request":"csW06","./lib/response":"47huq","xtend":"93zjj","builtin-status-codes":"iqSVp","url":"7qjc7"}],"csW06":[function(require,module,exports) {
-var Buffer = require("buffer").Buffer;
 var global = arguments[3];
+var Buffer = require("buffer").Buffer;
 var process = require("process");
 var capability = require("./capability");
 var inherits = require("inherits");
@@ -24095,7 +24095,7 @@ var unsafeHeaders = [
     "via"
 ];
 
-},{"process":"d5jf4","buffer":"fCgem","./capability":"jih7t","inherits":"bRL3M","./response":"47huq","readable-stream":"jXNWE"}],"jih7t":[function(require,module,exports) {
+},{"buffer":"fCgem","process":"d5jf4","./capability":"jih7t","inherits":"bRL3M","./response":"47huq","readable-stream":"jXNWE"}],"jih7t":[function(require,module,exports) {
 var global = arguments[3];
 exports.fetch = isFunction(global.fetch) && isFunction(global.ReadableStream);
 exports.writableStream = isFunction(global.WritableStream);
@@ -24148,8 +24148,8 @@ xhr = null // Help gc
 
 },{}],"47huq":[function(require,module,exports) {
 var process = require("process");
-var global = arguments[3];
 var Buffer = require("buffer").Buffer;
+var global = arguments[3];
 var capability = require("./capability");
 var inherits = require("inherits");
 var stream = require("readable-stream");
@@ -56277,8 +56277,8 @@ function compare(a, b) {
 
 },{"parse-asn1":"4Szbv","./mgf":"e2JgG","./xor":"iaxu0","bn.js":"3pDum","browserify-rsa":"e594P","create-hash":"2WyL8","./withPublic":"fFkPV","safe-buffer":"eW7r9"}],"k3tsT":[function(require,module,exports) {
 "use strict";
-var process = require("process");
 var global = arguments[3];
+var process = require("process");
 function oldBrowser() {
     throw new Error("secure random number generation not supported by this browser\nuse chrome, FireFox or Internet Explorer 11");
 }
