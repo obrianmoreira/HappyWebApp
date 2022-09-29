@@ -17,12 +17,12 @@ const leadSchema = {
 
 const Lead = mongoose.model('Lead', leadSchema);
 
-//app.get("/", (req, res)=>{
+app.get("https://happyapp-cleaning.vercel.app", (req, res)=>{
     //res.sendFile(__dirname + "/src/index.html");
-    //res.render(__dirname + "/views/pages/index.ejs",{});
-//})
+    res.render(__dirname + "/views/pages/index.ejs",{});
+})
 
-app.listen(3000, function(){
+app.listen('3000', function(){
     console.log("Foi")
 })
 
