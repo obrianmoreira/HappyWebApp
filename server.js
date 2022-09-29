@@ -25,7 +25,7 @@ const Lead = mongoose.model('Lead', leadSchema);
 //})
 
 app.listen(myURL, function(){
-    app.post((req, res) =>{
+    app.post(myURL, (req, res) =>{
         let newLead = new Lead({
             name: req.body.name,
             email: req.body.email,
