@@ -17,7 +17,7 @@ const leadSchema = {
 
 const Lead = mongoose.model('Lead', leadSchema);
 
-app.get("https://happyapp-cleaning.vercel.app", (req, res)=>{
+app.get("happy-lead-app.vercel.app", (req, res)=>{
     //res.sendFile(__dirname + "/src/index.html");
     res.render(__dirname + "/views/pages/index.ejs",{});
 })
@@ -34,5 +34,5 @@ app.post('/leads', (req, res) =>{
         phone: req.body.phone
     })
     newLead.save();
-    res.redirect('https://happyapp-cleaning.vercel.app');
+    res.redirect('happy-lead-app.vercel.app');
 })
