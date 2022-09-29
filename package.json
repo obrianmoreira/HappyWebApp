@@ -2,7 +2,7 @@
   "name": "happylandpage",
   "version": "1.0.0",
   "description": "",
-  "sourceTwo": "server.js",
+  "main": "server.js",
   "source": "/src/index.html",
   "scripts": {
     "dev": "parcel",

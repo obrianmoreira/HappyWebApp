@@ -1,9 +1,8 @@
 const express = require('express');
 const app = new express();
+const PORT = process.env.PORT || 3000
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-const myURL = new URL('https://happyapi-cleaning.vercel.app');
-
 
 app.use(bodyParser.urlencoded({extended: true}));
 
@@ -24,12 +23,17 @@ const Lead = mongoose.model('Lead', leadSchema);
     //res.render(__dirname + "/views/pages/index.ejs",{});
 //})
 
-app.post('http://happyapi-cleaning.vercel.app', (req, res) =>{
+app.listen(PORT, function(){
+    console.log("Foi")
+})
+
+app.post('/leads', (req, res) =>{
+    console.log("chegou");
     let newLead = new Lead({
         name: req.body.name,
         email: req.body.email,
         phone: req.body.phone
     })
     newLead.save();
-    res.redirect("http://happyapp-cleaning.vercel.app");
+    res.redirect('https://happyapp-cleaning.vercel.app');
 })
