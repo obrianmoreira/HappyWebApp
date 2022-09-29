@@ -2930,8 +2930,8 @@ Stream.prototype.pipe = function(dest, options) {
 // OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
 // USE OR OTHER DEALINGS IN THE SOFTWARE.
 "use strict";
-var global = arguments[3];
 var process = require("process");
+var global = arguments[3];
 module.exports = Readable;
 /*<replacement>*/ var Duplex;
 /*</replacement>*/ Readable.ReadableState = ReadableState;
@@ -20325,8 +20325,8 @@ var encode = function encode(str, defaultEncoder, charset, kind, format) {
          || c >= 0x30 && c <= 0x39 // 0-9
          || c >= 0x41 && c <= 0x5A // a-z
          || c >= 0x61 && c <= 0x7A // A-Z
-         || format === formats.RFC1738 && (c === 0x28 || c === 0x29) // ( )
-        ) {
+         || format === formats.RFC1738 && (c === 0x28 || c === 0x29 // ( )
+        )) {
             out += string.charAt(i);
             continue;
         }
@@ -21276,8 +21276,8 @@ app.del = deprecate.function(app.delete, "app.del: Use app.delete instead");
  * Copyright(c) 2014-2022 Douglas Christopher Wilson
  * MIT Licensed
  */ "use strict";
-var Buffer = require("buffer").Buffer;
 var process = require("process");
+var Buffer = require("buffer").Buffer;
 /**
  * Module dependencies.
  * @private
@@ -21504,7 +21504,7 @@ var isFinished = onFinished.isFinished;
     }
 }
 
-},{"buffer":"fCgem","process":"d5jf4","debug":"l0oUb","encodeurl":"ltQVl","escape-html":"dq9In","on-finished":"jSXz6","parseurl":"e7zvo","statuses":"l1u37","unpipe":"90C9o"}],"ltQVl":[function(require,module,exports) {
+},{"process":"d5jf4","buffer":"fCgem","debug":"l0oUb","encodeurl":"ltQVl","escape-html":"dq9In","on-finished":"jSXz6","parseurl":"e7zvo","statuses":"l1u37","unpipe":"90C9o"}],"ltQVl":[function(require,module,exports) {
 /*!
  * encodeurl
  * Copyright(c) 2016 Douglas Christopher Wilson
@@ -23827,9 +23827,9 @@ http.METHODS = [
 ];
 
 },{"./lib/request":"csW06","./lib/response":"47huq","xtend":"93zjj","builtin-status-codes":"iqSVp","url":"7qjc7"}],"csW06":[function(require,module,exports) {
+var global = arguments[3];
 var process = require("process");
 var Buffer = require("buffer").Buffer;
-var global = arguments[3];
 var capability = require("./capability");
 var inherits = require("inherits");
 var response = require("./response");
@@ -24147,8 +24147,8 @@ xhr = null // Help gc
 ;
 
 },{}],"47huq":[function(require,module,exports) {
-var global = arguments[3];
 var Buffer = require("buffer").Buffer;
+var global = arguments[3];
 var process = require("process");
 var capability = require("./capability");
 var inherits = require("inherits");
@@ -25925,8 +25925,8 @@ exports.constants = {
 
 },{"randombytes":"8hjhE","create-hash":"2WyL8","create-hmac":"k1utz","browserify-sign/algos":"busIB","pbkdf2":"g38Hg","browserify-cipher":"d4idn","diffie-hellman":"hwD3y","browserify-sign":"jbRNy","create-ecdh":"9Rcg1","public-encrypt":"h9Rdh","randomfill":"k3tsT"}],"8hjhE":[function(require,module,exports) {
 "use strict";
-var process = require("process");
 var global = arguments[3];
+var process = require("process");
 // limit of Crypto.getRandomValues()
 // https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues
 var MAX_BYTES = 65536;
@@ -27749,8 +27749,8 @@ module.exports = function(iterations, keylen) {
 };
 
 },{}],"T9r9Q":[function(require,module,exports) {
-var process = require("process");
 var global = arguments[3];
+var process = require("process");
 var defaultEncoding;
 /* istanbul ignore next */ if (global.process && global.process.browser) defaultEncoding = "utf-8";
 else if (global.process && global.process.version) {
@@ -56277,8 +56277,8 @@ function compare(a, b) {
 
 },{"parse-asn1":"4Szbv","./mgf":"e2JgG","./xor":"iaxu0","bn.js":"3pDum","browserify-rsa":"e594P","create-hash":"2WyL8","./withPublic":"fFkPV","safe-buffer":"eW7r9"}],"k3tsT":[function(require,module,exports) {
 "use strict";
-var global = arguments[3];
 var process = require("process");
+var global = arguments[3];
 function oldBrowser() {
     throw new Error("secure random number generation not supported by this browser\nuse chrome, FireFox or Internet Explorer 11");
 }
