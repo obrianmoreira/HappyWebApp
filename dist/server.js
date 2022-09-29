@@ -532,7 +532,6 @@ function hmrAcceptRun(bundle, id) {
 }
 
 },{}],"6lo7H":[function(require,module,exports) {
-var __dirname = "";
 const express = require("express");
 const app = new express();
 const mongoose = require("mongoose");
@@ -553,10 +552,10 @@ const leadSchema = {
     phone: String
 };
 const Lead = mongoose.model("Lead", leadSchema);
-app.get("https://happy-lead-app.vercel.app", (req, res)=>{
-    //res.sendFile(__dirname + "/src/index.html");
-    res.render(__dirname + "/views/pages/index.ejs", {});
-});
+//app.get("https://happy-lead-app.vercel.app", (req, res)=>{
+//res.sendFile(__dirname + "/src/index.html");
+//res.render(__dirname + "/views/pages/index.ejs",{});
+//})
 app.listen("3000", function() {
     console.log("Foi");
 });
