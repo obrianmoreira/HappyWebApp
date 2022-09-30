@@ -22,7 +22,7 @@ const Lead = mongoose.model('Lead', leadSchema);
     //res.render(__dirname + "/views/pages/index.ejs",{});
 //})
 
-app.post('/leads', (req, res) =>{
+app.post('https://happy-web-app.vercel.app/leads', (req, res) =>{
     console.log("chegou");
     let newLead = new Lead({
         name: req.body.name,
