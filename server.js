@@ -34,6 +34,6 @@ app.post('/leads', (req, res) =>{
     res.redirect('https://happy-web-app.vercel.app/ ');
 })
 
-app.listen("https://happy-web-app-api.vercel.app/", function(){
+app.listen("https://happy-web-app-api.vercel.app", function(){
     console.log("Foi")
 })
