@@ -22,10 +22,6 @@ const Lead = mongoose.model('Lead', leadSchema);
     //res.render(__dirname + "/views/pages/index.ejs",{});
 //})
 
-app.listen('3000', function(){
-    console.log("Foi")
-})
-
 app.post('http://happy-web-app-api.vercel.app', (req, res) =>{
     console.log("chegou");
     let newLead = new Lead({
@@ -36,3 +32,9 @@ app.post('http://happy-web-app-api.vercel.app', (req, res) =>{
     newLead.save();
     res.redirect('happy-web-app.vercel.app');
 })
+
+app.listen('3000', function(){
+    console.log("Foi")
+})
+
+module.exports = app;
