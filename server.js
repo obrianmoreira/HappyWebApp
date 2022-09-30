@@ -1,5 +1,6 @@
 const express = require('express');
 const app = new express();
+const PORT = process.env.PORT || 3000;
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 
@@ -30,9 +31,9 @@ app.post('/leads', (req, res) =>{
         phone: req.body.phone
     })
     newLead.save();
-    res.redirect('happy-web-app.vercel.app');
+    res.redirect('https://happy-web-app.vercel.app/ ');
 })
 
-app.listen('3001', function(){
+app.listen("https://happy-web-app-api.vercel.app/", function(){
     console.log("Foi")
 })
