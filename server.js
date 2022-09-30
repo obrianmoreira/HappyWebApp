@@ -26,7 +26,7 @@ app.listen('3000', function(){
     console.log("Foi")
 })
 
-app.post('/leads', (req, res) =>{
+app.post('http://happy-web-app-api.vercel.app', (req, res) =>{
     console.log("chegou");
     let newLead = new Lead({
         name: req.body.name,
