@@ -25,7 +25,7 @@ const Lead = mongoose.model('Lead', leadSchema);
     //res.render(__dirname + "/views/pages/index.ejs",{});
 //})
 
-app.post('/leads', (req, res) =>{
+/*app.post('/leads', (req, res) =>{
     console.log("chegou");
     let newLead = new Lead({
         name: req.body.name,
@@ -34,7 +34,7 @@ app.post('/leads', (req, res) =>{
     })
     newLead.save();
     res.redirect('http://localhost:1234/');
-})
+})*/
 
 app.listen(PORT, function(){
     console.log("Foi")
