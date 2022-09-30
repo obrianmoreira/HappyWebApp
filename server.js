@@ -1,10 +1,12 @@
 const express = require('express');
+const leads = require('./api/leads');
 const app = new express();
 const PORT = process.env.PORT || 3000;
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 
 app.use(bodyParser.urlencoded({extended: true}));
+app.use("/api/leads", leads);
 
 mongoose.connect('mongodb+srv://obrianmoreira:KaplerB@cluster0.r5ewwpf.mongodb.net/happyDB?retryWrites=true&w=majority', {useNewUrlParser: true}, {useUnifiedTopology: true})
 //mongodb+srv://obrianmoreira:KaplerB@cluster0.r5ewwpf.mongodb.net/?retryWrites=true&w=majority
@@ -31,9 +33,9 @@ app.post('/leads', (req, res) =>{
         phone: req.body.phone
     })
     newLead.save();
-    res.redirect('https://happy-web-app.vercel.app/ ');
+    res.redirect('http://localhost:1234/');
 })
 
-app.listen("https://happy-web-app-api.vercel.app", function(){
+app.listen(PORT, function(){
     console.log("Foi")
-})
+})  
