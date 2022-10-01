@@ -3,9 +3,15 @@ const router = express.Router();
 
 router.get('/', async (req, res) => {
     try{
-        res.json({
-            status:200,
-            message: "Get data has done"
+        router.post('/', (req, res) =>{
+            console.log("chegou");
+            let newLead = new Lead({
+                name: req.body.name,
+                email: req.body.email,
+                phone: req.body.phone
+            })
+            newLead.save();
+            res.redirect('https://happyclean-api.vercel.app/');
         })
     } catch (error) {
         console.error(error);
