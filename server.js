@@ -1,5 +1,5 @@
 const express = require('express');
-const leads = require('./api/leads');
+const leads = require('./api/contacts');
 const app = new express();
 const PORT = process.env.PORT || 3000;
 const mongoose = require('mongoose');
