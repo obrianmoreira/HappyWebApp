@@ -16,12 +16,12 @@
             "dest": "contacts.js"
         },
         {
-            "src": "/",
-            "dest": "src/index.html"
+            "src": "/index.html",
+            "dest": "./src/index.html"
         },
         {
             "src": "/(.+)",
-            "dest": "src/$1"
+            "dest": "./src/$1"
         }
       ]
   }
