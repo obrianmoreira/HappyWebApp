@@ -20,10 +20,6 @@
             "dest": "src/index.html"
         },
         {
-            "src": "/",
-            "dest": "src/assets/main.scss"
-        },
-        {
             "src": "/(.+)",
             "dest": "src/$1"
         }
