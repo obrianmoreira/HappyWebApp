@@ -25,7 +25,7 @@ const Lead = mongoose.model('Lead', leadSchema);
     //res.render(__dirname + "/views/pages/index.ejs",{});
 //})
 
-app.post('/api/contacts', (req, res) =>{
+leads.post('/', (req, res) =>{
     console.log("chegou");
     let newLead = new Lead({
         name: req.body.name,
