@@ -12,12 +12,16 @@
     ],
     "routes": [
         {
-            "src": "/api/(.*)",
+            "src": "/api/**",
             "dest": "contacts.js"
         },
         {
             "src": "/",
             "dest": "src/index.html"
+        },
+        {
+            "src": "/(.+)",
+            "dest": "src/$1"
         }
       ]
   }
