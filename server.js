@@ -25,7 +25,7 @@ const Lead = mongoose.model('Lead', leadSchema);
     //res.render(__dirname + "/views/pages/index.ejs",{});
 //})
 
-leads.post('/leads', (req, res) =>{
+/*leads.post('/leads', (req, res) =>{
     console.log("chegou");
     let newLead = new Lead({
         name: req.body.name,
@@ -34,7 +34,7 @@ leads.post('/leads', (req, res) =>{
     })
     newLead.save();
     res.redirect('https://happyclean-api.vercel.app/');
-})
+})*/
 
 app.listen(PORT, function(){
     console.log("Foi")

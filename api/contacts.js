@@ -9,7 +9,7 @@ const bodyParser = require('body-parser');
 mongoose.connect('mongodb+srv://obrianmoreira:KaplerB@cluster0.r5ewwpf.mongodb.net/happyDB?retryWrites=true&w=majority', {useNewUrlParser: true}, {useUnifiedTopology: true})
 
 app.use(bodyParser.urlencoded({extended: true}));
-app.use("/api/leads", leads);
+app.use("/api/contacts", leads);
 
 const leadSchema = {
     name: String,
