@@ -1,7 +1,7 @@
 const express = require('express');
 const leads = require('./api/contacts');
 const app = new express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.API_URL || 3000;
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 
